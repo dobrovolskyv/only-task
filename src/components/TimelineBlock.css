@@ -1,0 +1,147 @@
+.timeline-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 4rem 0;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeline-circle {
+  position: relative;
+  width: 24rem;
+  height: 24rem;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+}
+
+.timeline-slice {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6rem;
+  height: 2rem;
+  text-align: center;
+  line-height: 2rem;
+  font-weight: bold;
+  color: #444;
+  cursor: pointer;
+  transform-origin: center center;
+  transition: all 0.3s ease;
+}
+
+.timeline-slice.active {
+  color: #fff;
+  background-color: #0077ff;
+  border-radius: 1rem;
+}
+
+.timeline-center {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  width: 10rem;
+  height: 4rem;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  line-height: 2rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+
+.timeline-slider-wrapper {
+  margin-top: 3rem;
+  max-width: 600px;
+  width: 90%;
+}
+
+.timeline-slide {
+  padding: 1rem 2rem;
+  background-color: #f0f0f0;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.timeline-slide h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+}
+
+.timeline-slide p {
+  margin: 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.timeline-rotation-wrapper {
+  position: relative;
+  width: 24rem;
+  height: 24rem;
+  margin: 0 auto;
+  transform-origin: center;
+}
+
+
+
+.timeline-stats {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.digit-group {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.digit-wrapper {
+  overflow: hidden;
+  height: 2em;
+  width: 1ch;
+  position: relative;
+}
+
+.digit-strip {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.5s ease;
+}
+
+.digit {
+  height: 2em;
+  text-align: center;
+  line-height: 2em;
+}
+
+.stats-label {
+  font-size: 1rem;
+  color: #666;
+  margin-left: 0.5rem;
+}
+
+.timeline-nav-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.timeline-nav-buttons button {
+  background-color: #eee;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.timeline-nav-buttons button:hover {
+  background-color: #ddd;
+}
