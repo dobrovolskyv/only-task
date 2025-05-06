@@ -147,20 +147,26 @@ const TimelineBlock: React.FC<TimelineBlockProps> = ({ slices }) => {
 
             <div className="timeline-nav-buttons">
                 <button onClick={() => setActiveIndex((prev) => (prev - 1 + slices.length) % slices.length)}>
-                    ◀
+                    <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.49988 0.750001L2.24988 7L8.49988 13.25" stroke="#42567A" stroke-width="2" />
+                    </svg>
+
                 </button>
                 <button onClick={() => setActiveIndex((prev) => (prev + 1) % slices.length)}>
-                    ▶
+                    <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.49988 0.750001L2.24988 7L8.49988 13.25" stroke="#42567A" stroke-width="2" />
+                    </svg>
+
                 </button>
             </div>
 
             <div className="timeline-slider-wrapper">
                 <Swiper
-                    modules={[Navigation, Pagination]}
+                    modules={[Navigation]}
                     spaceBetween={20}
-                    slidesPerView={1}
+                    slidesPerView={4}
                     navigation
-                    pagination={{ clickable: true }}
+                  
                 >
                     {slices[activeIndex].events.map((event: any) => (
                         <SwiperSlide key={event.id}>

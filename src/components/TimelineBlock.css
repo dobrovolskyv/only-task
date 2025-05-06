@@ -9,9 +9,9 @@
 
 .timeline-circle {
   position: relative;
-  width: 24rem;
-  height: 24rem;
-  border: 2px solid #ccc;
+  width: 530px;
+  height: 530px;
+  border: 2px solid #42567a2b;
   border-radius: 50%;
 }
 
@@ -52,27 +52,26 @@
 
 .timeline-slider-wrapper {
   margin-top: 3rem;
-  max-width: 600px;
-  width: 90%;
+  max-width: 100%;
+ 
 }
 
 .timeline-slide {
-  padding: 1rem 2rem;
-  background-color: #f0f0f0;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  max-width: 320px;
+  width: 100%;
+  margin-left: 40px;
 }
 
 .timeline-slide h3 {
-  margin: 0 0 0.5rem;
-  font-size: 1.25rem;
+  color: #3877EE;
+  font-size: 25px;
+  margin-bottom: 15px;
 }
 
 .timeline-slide p {
-  margin: 0;
-  font-size: 1rem;
-  color: #555;
+  color: #42567A;
+  font-size: 20px;
+  line-height: 30px;
 }
 
 .timeline-rotation-wrapper {
@@ -98,6 +97,15 @@
 .digit-group {
   display: flex;
   gap: 0.2rem;
+  font-size: 200px;
+  color: #5D5FEF;
+  z-index: 20;
+  position: relative;
+}
+
+.digit-group:last-child {
+  color: #EF5DA8;
+  margin-left: 120px;
 }
 
 .digit-wrapper {
@@ -126,22 +134,39 @@
 }
 
 .timeline-nav-buttons {
+  width: 50px;
+  height: 50px;
   display: flex;
   justify-content: center;
-  gap: 2rem;
-  margin-top: 2rem;
+  align-items: center;
+  gap:20px;
+  position: absolute;
+  left: 200px;
+  bottom: 200px;
+  
 }
 
 .timeline-nav-buttons button {
-  background-color: #eee;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  font-size: 1.5rem;
-  border-radius: 8px;
+ 
+  border: 1px solid hsla(219, 30%, 37%, 0.5);
+  padding: 18px 21px;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  border-radius: 50%;
+  background: transparent;
+
+}
+.timeline-nav-buttons button:last-child {
+  transform: rotate(180deg);
 }
 
 .timeline-nav-buttons button:hover {
-  background-color: #ddd;
+  border: 1px solid hsla(219, 30%, 37%, 1);
+}
+
+
+.swiper-button-prev{
+  left: 0px;
+}
+.swiper-button-next{
+  right: 0;
 }

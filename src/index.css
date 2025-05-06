@@ -7,7 +7,28 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+.container{
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.title{
+  font-size: 56px;
+  line-height: 120%;
+  font-weight: bold;
+  max-width: 353px;
+  position: relative;
+  color: #42567A;
+}
+.title::before{
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: -20px;
+  display: block;
+  width: 5px;
+  height: 120px;
+  margin-bottom: 20px;
+  background: linear-gradient(0deg, #EF5DA8 0%, #8F6BCD 50%, #3877EE 100%);
 }
